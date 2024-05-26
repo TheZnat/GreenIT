@@ -5,13 +5,299 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./fonts.css">
+  <link rel="stylesheet" href="./src/slider/slider.css">
+  <script type="module" src="./src/slider/slider.js"></script>
   <title>GreenIT</title>
 </head>
 
 <body>
-  <div id="app"></div>
-  <p>Верстка</p>
-  <!-- <script type="module" src="/main.js"></script> -->
+  <header class="header">
+    <img src="./src/Images/logo.svg" alt="GreenIT" class="logo">
+    <nav>
+      <ul class="header__nav">
+        <li class="header__nav-item">
+          <a class="header__nav-item-link" href="#">Услуги</a>
+        </li>
+        <li class="header__nav-item">
+          <a class="header__nav-item-link" href="#">Кейсы</a>
+        </li>
+        <li class="header__nav-item">
+          <a class="header__nav-item-link" href="#">Контакты</a>
+        </li>
+        <li class="header__nav-item">
+          <a class="header__nav-item-link" href="#">О нас</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="header__bth-area">
+
+
+
+      <div class="contacts bth">
+        <a href="tel:+79626861369">
+          <p class="number">+7 962 686 1369</p>
+        </a>
+        <a href="#">
+          <img src="./src/Images/telegram.svg" class="bth--icon">
+        </a>
+
+
+      </div>
+
+      <button class="bth bth--porject">
+        Обсудить проект
+        <img src="./src/Images/bi_stars.svg" class="bth--img">
+      </button>
+
+    </div>
+
+
+
+  </header>
+  <main>
+    <section class="info">
+      <div class="info__text">
+        <h1 class="info__text__title">Ваш проводник </br> в цифровой мир</h1>
+        <p class="info__text__subtitle">Собственный IT отдел по цене 1 специалиста</p>
+      </div>
+      <div class="radian--item-left"></div>
+      <div class="radian--item-right"></div>
+
+      <button class="bth bth--porject bth--info">
+        Обсудить проект
+        <img src="./src/Images/bi_stars.svg" class="bth--img">
+      </button>
+
+      <div class="info__partners">
+        <img src="./src/Images/elama.svg" alt="elama" class="partners__item--elama" />
+        <img src="./src/Images/uix.svg" alt="uix" class="partners__item--uix" />
+        <img src="./src/Images/bitrix.svg" alt="Битрекс" class="partners__item--bitrix" />
+        <img src="./src/Images/VK.svg" alt="Вконтакте" class="partners__item--vk" />
+      </div>
+
+      <div class="info__cards">
+        <div class="info__card__item">
+          <p class="info__card__item__title">
+            Продвижение
+          </p>
+          <p class="info__card__item__text">
+            Комплексный маркетинг в Digital пространстве, который помимо лидов даст вам продажи. Индивидуальный подход
+            под каждый проект.
+          </p>
+          <a href="#" class="info__card__item__link">Подробнее</a>
+        </div>
+
+        <div class="info__card__item">
+          <p class="info__card__item__title">
+            Цифровой аудит
+          </p>
+          <p class="info__card__item__text">
+            Анализ вашего цифрового окружения, поиск слабых мест, составление дорожной карты по улучшению текущей
+            ситуации.
+          </p>
+          <a href="#" class="info__card__item__link">Подробнее</a>
+        </div>
+
+        <div class="info__card__item">
+          <p class="info__card__item__title">
+            Интеграция CRM
+          </p>
+          <p class="info__card__item__text">
+            Интеграция любых CRM систем с глубоким анализом ваших бизнес-процессов и комплексным обучением всех
+            сотрудников.
+          </p>
+          <a href="#" class="info__card__item__link">Подробнее</a>
+        </div>
+
+        <div class="info__card__item">
+          <p class="info__card__item__title">
+            Маркетинговый аудит
+          </p>
+          <p class="info__card__item__text">
+            Анализ ваших рекламных компаний и составления рекомендаций по улучшению показателей на основании статистики
+          </p>
+          <a href="#" class="info__card__item__link">Подробнее</a>
+        </div>
+      </div>
+
+    </section>
+    <section class="about">
+      <h2 class="about__title">
+        О нас
+      </h2>
+
+      <div class="info__cards">
+
+        <div class="info__card__item info__card__item--about ">
+          <img class="card__img--pattner" alt="иконка партнеры" src="./src/Images/icon/partners-icon.svg"
+            loading="lazy" />
+          <div class="title--area">
+            <p class="info__card__item__title">
+              Официальный партнер
+            </p>
+            <div class="arrow"></div>
+          </div>
+
+          <p class="info__card__item__text card__item__text--about">
+            Постоянно подтверждаем свои компетенции и проходим акредитацию. Поэтому являемся официальным партнером
+            Bitrix24, UIS, Wazzup и другие
+          </p>
+        </div>
+
+        <div class="info__card__item info__card__item--about ">
+          <img class="card__img--pattner" alt="иконка денег" src="./src/Images/icon/mony-icon.svg" loading="lazy" />
+          <div class="title--area">
+            <p class="info__card__item__title">
+              Считаем деньги
+            </p>
+            <div class="arrow"></div>
+          </div>
+          <p class="info__card__item__text card__item__text--about">
+            Нам важно, чтобы наш заказчик развивался и рос вместе с нами, поэтому предлагаем только экономически
+            оправданные решения
+          </p>
+        </div>
+
+        <div class="info__card__item info__card__item--about second-row">
+          <img class="card__img--pattner" alt="иконка 24/7" src="./src/Images/icon/Chat-icon.svg" loading="lazy" />
+          <div class="title--area">
+            <p class="info__card__item__title">
+              24/7 На связи
+            </p>
+            <div class="arrow"></div>
+          </div>
+
+          <p class="info__card__item__text card__item__text--about">
+            Не заходит в CRM, не работает телефония? <br /> Мы на связи и готовы помогать
+          </p>
+        </div>
+
+        <div class="info__card__item info__card__item--about second-row">
+          <img class="card__img--pattner" alt="иконка диалог" src="./src/Images/icon/Chat-icon.svg" loading="lazy" />
+          <div class="title--area">
+            <p class="info__card__item__title">
+              Умеем договариваться
+            </p>
+            <div class="arrow"></div>
+          </div>
+
+          <p class="info__card__item__text card__item__text--about">
+            Подбираем условия для любых компаний, от индивидуальных предпринимателей до холдингов
+          </p>
+        </div>
+
+
+    </section>
+    <section class="case">
+      <!-- <div class="case__text-area">
+        <h2 class="case__title">Кейсы</h2>
+        <p class="case__subtitle">
+          Ознакомьтесь с нашими успешными проектами 
+и реальными примерами решений, которые мы реализовали для клиентов. Каждое дело - это уникальный подход, достижение поставленных целей и впечатляющие результаты. Узнайте, как мы помогли бизнесам разных отраслей стать эффективнее и успешнее!
+        </p>
+      </div> -->
+
+
+      <div class="case__cards" id="gallery">
+        <div class="gallery-line">
+
+          <div class="gallery-slide">
+            <div class="slide">
+              <img src="src/Images/Cases-logo/PD.svg" alt="ProfilDoors" class="slide__item__img--pd" loading="lazy">
+              <p class="slide__item__title">Интеграция Битрикс</p>
+            </div>
+          </div>
+
+          <div class="gallery-slide">
+            <div class="slide">
+              <img src="src/Images/Cases-logo/Warmet.svg" alt="ProfilDoors" class="slide__item__img--wm" loading="lazy">
+              <p class="slide__item__title">Системное администрирование</p>
+            </div>
+          </div>
+
+          <div class="gallery-slide">
+            <div class="slide">
+
+              <img src="src/Images/Cases-logo/Rada.svg" alt="ProfilDoors" class="slide__item__img--rada" loading="lazy">
+              <p class="slide__item__title">Кейс по лидогенерации</p>
+            </div>
+          </div>
+
+          <div class="gallery-slide">
+            <div class="slide">
+              <img src="src/Images/Cases-logo/Rada.svg" alt="ProfilDoors" class="slide__item__img--rada" loading="lazy">
+              <p class="slide__item__title">Кейс по лидогенерации</p>
+            </div>
+          </div>
+
+
+
+
+
+
+        </div>
+      </div>
+
+
+    </section>
+
+
+
+    <section class="feedback-form">
+      <div class="feedback-form__area">
+        <h2 class="feedback-form__leftArea__title">Хотите узнать больше?</h2>
+        <p class="feedback-form__leftArea__text">
+          Оставьте заявку, и наши специалисты свяжутся с вами в ближайшее время!
+          Мы готовы ответить на все ваши вопросы и предоставить подробную информацию
+          о наших услугах. для уточнения деталей и консультации. Доверьте свой проект
+          профессионалам!
+        </p>
+      </div>
+      <div class="feedback-form__area">
+        <p>
+          Здесь будет <br />
+          форма из Битрекс24
+        </p>
+      </div>
+      <div class="feedback-form--radian"></div>
+    </section>
+
+    <footer>
+      <div>logo</div>
+      <div>
+        <ul>
+          <li>Политика конфиденциальности</li>
+          <li>Правила чего-то там</li>
+        </ul>
+      </div>
+
+      <div>
+        <ul>
+          <li>Кейсы</li>
+          <li>О нас</li>
+        </ul>
+      </div>
+
+      <div>
+        <ul>
+          <li>Telegram</li>
+          <li>вконтакте</li>
+          <li>Whatsapp</li>
+        </ul>
+      </div>
+      <p>©️2024 Green IT </p>
+    </footer>
+
+
+
+
+
+  </main>
+  <script type="module" src="main.js"></script>
 </body>
+
 
 </html>
