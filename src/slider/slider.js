@@ -7,7 +7,9 @@ export function Slider(element) {
   let containerNode = element;
   let currentSlide = 0;
   let lineNode = containerNode.querySelector(`.${GalleryLineClassName}`);
-  let gapSize = Number(window.getComputedStyle(lineNode).gap.replace(/\px/g,''));
+  let gapSize = Number(
+    window.getComputedStyle(lineNode).gap.replace(/\px/g, "")
+  );
   let slideSize = containerNode.querySelector(`.${GalleryOneSlideClassName}`);
 
   let x;
@@ -30,7 +32,7 @@ export function Slider(element) {
     let coordsContainer = slideSize.getBoundingClientRect();
     width = coordsContainer.width;
     maximumX = -(size - 1) * (width + gapSize);
-    x = -currentSlide * ( width + gapSize);
+    x = -currentSlide * (width + gapSize);
     lineNode.style.width = `${(width + gapSize) * size}px`;
 
     slideNode.forEach((slide) => {
@@ -52,10 +54,9 @@ export function Slider(element) {
     window.addEventListener("pointermove", dragging);
   }
 
-
   function stopDrag() {
     window.removeEventListener("pointermove", dragging);
-    x = -currentSlide * ( width + gapSize);
+    x = -currentSlide * (width + gapSize);
     setStylePositions();
     setStyleTransition();
   }
