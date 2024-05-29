@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="GreenIT">
@@ -19,25 +20,28 @@ GreenIT, git, agency, маркетинг, маркетинговое агент�
   <link rel="stylesheet" href="./fonts.css">
   <link rel="stylesheet" href="./src/slider/slider.css">
   <link rel="stylesheet" href="./src/animation/animations.css">
+  <link rel="stylesheet" href="./src/popup/popup.css">
+  <script type="module" src="./src/popup/popup.js"></script>
   <script type="module" src="./src/slider/slider.js"></script>
   <title>GreenIT</title>
 </head>
+
 <body>
   <header class="header">
     <img src="./src/Images/logo.svg" alt="GreenIT" class="logo">
     <nav>
       <ul class="header__nav">
         <li class="header__nav-item">
-          <a class="header__nav-item-link" href="#">Услуги</a>
+          <a class="header__nav-item-link" href="#services">Услуги</a>
         </li>
         <li class="header__nav-item">
-          <a class="header__nav-item-link" href="#">Кейсы</a>
+          <a class="header__nav-item-link" href="#case">Кейсы</a>
         </li>
         <li class="header__nav-item">
-          <a class="header__nav-item-link" href="#">Контакты</a>
+          <a class="header__nav-item-link" href="#contacts">Контакты</a>
         </li>
         <li class="header__nav-item">
-          <a class="header__nav-item-link" href="#">О нас</a>
+          <a class="header__nav-item-link" href="#about">О нас</a>
         </li>
       </ul>
     </nav>
@@ -51,7 +55,7 @@ GreenIT, git, agency, маркетинг, маркетинговое агент�
           <img src="./src/Images/telegram.svg" class="bth--icon">
         </a>
       </div>
-      <button class="bth bth--porject" onclick="">
+      <button class="bth bth--porject">
         Обсудить проект
         <img src="./src/Images/bi_stars.svg" class="bth--img">
       </button>
@@ -60,7 +64,7 @@ GreenIT, git, agency, маркетинг, маркетинговое агент�
   </header>
   <main>
     <section class="info">
-      <div class="info__text animated animate__zoomIn">
+      <div class="info__text">
         <h1 class="info__text__title fadeIn">Ваш проводник </br> в цифровой мир</h1>
         <p class="info__text__subtitle fadeInSubtitle">Собственный IT отдел по цене 1 специалиста</p>
       </div>
@@ -79,7 +83,7 @@ GreenIT, git, agency, маркетинг, маркетинговое агент�
         <img src="./src/Images/VK.svg" alt="Вконтакте" class="partners__item--vk" />
       </div>
 
-      <div class="info__cards">
+      <div class="info__cards" id="services">
         <div class="info__card__item wow fadeInUp-first">
           <p class="info__card__item__title">
             Продвижение
@@ -240,7 +244,7 @@ GreenIT, git, agency, маркетинг, маркетинговое агент�
       </div>
 
     </section>
-    <section class="feedback-form wow fadeInUp-first ">
+    <section class="feedback-form wow fadeInUp-first" id="contacts">
       <div class="feedback-form__area">
         <h2 class="feedback-form__leftArea__title">Хотите узнать больше?</h2>
         <p class="feedback-form__leftArea__text">
@@ -310,4 +314,5 @@ GreenIT, git, agency, маркетинг, маркетинговое агент�
   <script src="./src/animation/animation.js"></script>
   <script>(new WOW).init()</script>
 </body>
+
 </html>

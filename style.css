@@ -69,6 +69,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 .contacts {
@@ -120,10 +121,12 @@ img {
   color: #1e1e1e;
   white-space: normal;
   margin-bottom: 24px;
+  user-select: none;
 }
 
 .info__text__subtitle {
   font-family: var(--second-family);
+  user-select: none;
   font-weight: 500;
   font-size: 20px;
   text-align: center;
@@ -281,6 +284,7 @@ img {
   font-weight: 600;
   font-size: 32px;
   color: #1e1e1e;
+  user-select: none;
 }
 
 .card__img--pattner {
@@ -340,6 +344,7 @@ img {
   font-family: var(--second-family);
   font-weight: 600;
   font-size: 32px;
+  user-select: none;
 }
 
 .case__subtitle {

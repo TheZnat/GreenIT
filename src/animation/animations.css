@@ -6,8 +6,9 @@
 }
 
 .fadeInSubtitle {
-  -webkit-animation-duration: 3s;
-  animation-duration: 3s;
+  -webkit-animation-name: fadeIn;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
   animation-name: fadeIn;
 }
 
