@@ -21,6 +21,7 @@ GreenIT, git, agency, маркетинг, маркетинговое агент�
   <link rel="stylesheet" href="./src/slider/slider.css">
   <link rel="stylesheet" href="./src/animation/animations.css">
   <link rel="stylesheet" href="./src/popup/popup.css">
+  <link rel="stylesheet" href="./src/adaptive/adaptive.css">
   <script type="module" src="./src/popup/popup.js"></script>
   <script type="module" src="./src/slider/slider.js"></script>
   <title>GreenIT</title>
@@ -62,11 +63,11 @@ GreenIT, git, agency, маркетинг, маркетинговое агент�
     </div>
 
   </header>
-  <main>
+  <main class="main">
     <section class="info">
       <div class="info__text">
         <h1 class="info__text__title fadeIn">Ваш проводник </br> в цифровой мир</h1>
-        <p class="info__text__subtitle fadeInSubtitle">Собственный IT отдел по цене 1 специалиста</p>
+        <p class="info__text__subtitle fadeInSubtitle">Собственный IT отдел <br class="info__text__subtitle--br" />по цене 1 специалиста</p>
       </div>
       <div class="radian--item-left bubble__animation"></div>
       <div class="radian--item-right levitation"></div>
@@ -130,7 +131,7 @@ GreenIT, git, agency, маркетинг, маркетинговое агент�
 
     </section>
     <section class="about" id="about">
-      <h2 class="about__title">
+      <h2 class="section__title about__title">
         О нас
       </h2>
       <div class="info__cards">
@@ -194,7 +195,7 @@ GreenIT, git, agency, маркетинг, маркетинговое агент�
     </section>
     <section class="case" id="case">
       <div class="case__text-area">
-        <h2 class="case__title">Кейсы</h2>
+        <h2 class="section__title">Кейсы</h2>
         <p class="case__subtitle wow fadeInUp-second">
           Ознакомьтесь с нашими успешными проектами
           и реальными примерами решений, которые мы реализовали для клиентов. Каждое дело - это уникальный подход,
@@ -209,14 +210,15 @@ GreenIT, git, agency, маркетинг, маркетинговое агент�
 
             <div class="gallery-slide">
               <div class="slide">
-                <img src="src/Images/Cases-logo/PD.svg" alt="ProfilDoors" class="slide__item__img--pd" loading="lazy">
+                <img src="src/Images/Cases-logo/PD.svg" alt="ProfilDoors" class="slide__item__img--iconLogo"
+                  loading="lazy">
                 <p class="slide__item__title">Интеграция Битрикс</p>
               </div>
             </div>
 
             <div class="gallery-slide">
               <div class="slide">
-                <img src="src/Images/Cases-logo/Warmet.svg" alt="ProfilDoors" class="slide__item__img--wm"
+                <img src="src/Images/Cases-logo/Warmet.svg" alt="ProfilDoors" class="slide__item__img--iconLogo"
                   loading="lazy">
                 <p class="slide__item__title">Системное администрирование</p>
               </div>
@@ -225,7 +227,7 @@ GreenIT, git, agency, маркетинг, маркетинговое агент�
             <div class="gallery-slide">
               <div class="slide">
 
-                <img src="src/Images/Cases-logo/Rada.svg" alt="ProfilDoors" class="slide__item__img--rada"
+                <img src="src/Images/Cases-logo/Rada.svg" alt="ProfilDoors" class="slide__item__img--iconLogo"
                   loading="lazy">
                 <p class="slide__item__title">Кейс по лидогенерации</p>
               </div>
@@ -233,7 +235,7 @@ GreenIT, git, agency, маркетинг, маркетинговое агент�
 
             <div class="gallery-slide">
               <div class="slide">
-                <img src="src/Images/Cases-logo/Rada.svg" alt="ProfilDoors" class="slide__item__img--rada"
+                <img src="src/Images/Cases-logo/Rada.svg" alt="ProfilDoors" class="slide__item__img--iconLogo"
                   loading="lazy">
                 <p class="slide__item__title">Кейс по лидогенерации</p>
               </div>
@@ -244,23 +246,25 @@ GreenIT, git, agency, маркетинг, маркетинговое агент�
       </div>
 
     </section>
-    <section class="feedback-form wow fadeInUp-first" id="contacts">
-      <div class="feedback-form__area">
-        <h2 class="feedback-form__leftArea__title">Хотите узнать больше?</h2>
-        <p class="feedback-form__leftArea__text">
-          Оставьте заявку, и наши специалисты свяжутся с вами в ближайшее время!
-          Мы готовы ответить на все ваши вопросы и предоставить подробную информацию
-          о наших услугах. для уточнения деталей и консультации. Доверьте свой проект
-          профессионалам!
-        </p>
+    <section class="feedback" id="contacts">
+      <div class="feedback-form wow fadeInUp-first ">
+        <div class="feedback-form__area">
+          <h2 class="feedback-form__leftArea__title">Хотите узнать больше?</h2>
+          <p class="feedback-form__leftArea__text">
+            Оставьте заявку, и наши специалисты свяжутся с вами в ближайшее время!
+            Мы готовы ответить на все ваши вопросы и предоставить подробную информацию
+            о наших услугах. для уточнения деталей и консультации. Доверьте свой проект
+            профессионалам!
+          </p>
+        </div>
+        <div class="feedback-form__area">
+          <p>
+            Здесь будет <br />
+            форма из Битрекс24
+          </p>
+        </div>
+        <div class="feedback-form--radian"></div>
       </div>
-      <div class="feedback-form__area">
-        <p>
-          Здесь будет <br />
-          форма из Битрекс24
-        </p>
-      </div>
-      <div class="feedback-form--radian"></div>
     </section>
     <footer class="footer">
       <div class="footer-logo">
@@ -271,7 +275,7 @@ GreenIT, git, agency, маркетинг, маркетинговое агент�
         <div class="footer__column">
           <ul class="footer__nav__text">
             <li class="footer__nav__text--item">
-              <a href="#">Политика конфиденциальности</a>
+              <a href="#">Полит. конф.</a>
             </li>
             <li>
               <a href="#">Правила чего-то там</a>

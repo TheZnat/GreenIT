@@ -41,6 +41,8 @@ export function Slider(element) {
   }
 
   function setEvents() {
+    let debounceResizeGallery = debounce(resizeGallery);
+    window.addEventListener("resize", debounceResizeGallery);
     lineNode.addEventListener("pointerdown", startDrag);
     window.addEventListener("pointerup", stopDrag);
     window.addEventListener("pointercancel", stopDrag);
@@ -88,6 +90,18 @@ export function Slider(element) {
       currentSlideWasChanged = true;
       currentSlide = currentSlide + 1;
     }
+  }
+
+  function resizeGallery() {
+    setParameters();
+  }
+
+  function debounce(func, time = 50) {
+    let timer;
+    return function (event) {
+      clearInterval(timer);
+      timer = setTimeout(func, time, event);
+    };
   }
 
   function setStylePositions() {
