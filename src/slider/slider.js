@@ -3,7 +3,24 @@ const GalleryLineClassName = "gallery-line";
 const GallerySlideClassName = "gallery-slide";
 const GalleryOneSlideClassName = "slide";
 
-export function Slider(element) {
+export let Slider = (element) => {
+  let eventDown;
+  let eventUp;
+  let eventCancel;
+  let eventMove;
+
+  if (!navigator.platform.match(/iPhone|iPod|iPad/)) {
+    eventDown = "pointerdown";
+    eventUp = "pointerup";
+    eventCancel = "pointercancel";
+    eventMove = "pointermove";
+  } else {
+    eventDown = "touchstart";
+    eventUp = "touchend";
+    eventCancel = "touchcancel";
+    eventMove = "touchmove";
+  }
+
   let containerNode = element;
   let currentSlide = 0;
   let lineNode = containerNode.querySelector(`.${GalleryLineClassName}`);
@@ -24,11 +41,9 @@ export function Slider(element) {
   let size = lineNode.childElementCount;
   let slideNode = Array.from(lineNode.children);
 
-  setEvents();
-  setParameters();
   // функции
 
-  function setParameters() {
+  let setParameters = () => {
     let coordsContainer = slideSize.getBoundingClientRect();
     width = coordsContainer.width;
     maximumX = -(size - 1) * (width + gapSize);
@@ -38,32 +53,38 @@ export function Slider(element) {
     slideNode.forEach((slide) => {
       slide.style.width = `${width}px`;
     });
-  }
+  };
 
-  function setEvents() {
+  let setEvents = () => {
     let debounceResizeGallery = debounce(resizeGallery);
     window.addEventListener("resize", debounceResizeGallery);
-    lineNode.addEventListener("pointerdown", startDrag);
-    window.addEventListener("pointerup", stopDrag);
-    window.addEventListener("pointercancel", stopDrag);
-  }
+    lineNode.addEventListener(`${eventDown}`, startDrag, { passive: false });
+    window.addEventListener(`${eventUp}`, stopDrag, { passive: false });
+    window.addEventListener(`${eventCancel}`, stopDrag, { passive: false });
+  };
 
-  function startDrag(event) {
+  let startDrag = (event) => {
+    // event.stopPropagation();
+    // event.preventDefault();
     currentSlideWasChanged = false;
     clickX = event.pageX;
     startX = x;
     resetStyleTransition();
-    window.addEventListener("pointermove", dragging);
-  }
+    window.addEventListener(`${eventMove}`, dragging);
+  };
 
-  function stopDrag() {
-    window.removeEventListener("pointermove", dragging);
+  let stopDrag = () => {
+    // event.stopPropagation();
+    // event.preventDefault();
+    window.removeEventListener(`${eventMove}`, dragging);
     x = -currentSlide * (width + gapSize);
     setStylePositions();
     setStyleTransition();
-  }
+  };
 
-  function dragging(event) {
+  let dragging = (event) => {
+    // event.stopPropagation();
+    // event.preventDefault();
     dragX = event.pageX;
     dragShift = dragX - clickX;
     let easing = dragShift / 5;
@@ -72,7 +93,7 @@ export function Slider(element) {
 
     // смена активного слайда
     if (
-      dragShift > 30 &&
+      dragShift > 17 &&
       dragShift > 0 &&
       !currentSlideWasChanged &&
       currentSlide > 0
@@ -82,7 +103,7 @@ export function Slider(element) {
     }
 
     if (
-      dragShift < -30 &&
+      dragShift < -17 &&
       dragShift < 0 &&
       !currentSlideWasChanged &&
       currentSlide < size - 1
@@ -90,29 +111,47 @@ export function Slider(element) {
       currentSlideWasChanged = true;
       currentSlide = currentSlide + 1;
     }
-  }
+  };
 
-  function resizeGallery() {
+  let resizeGallery = () => {
     setParameters();
-  }
+  };
 
-  function debounce(func, time = 50) {
+  let debounce = (func, time = 50) => {
     let timer;
     return function (event) {
       clearInterval(timer);
       timer = setTimeout(func, time, event);
     };
-  }
+  };
 
-  function setStylePositions() {
-    lineNode.style.transform = `translate3d(${x}px, 0, 0)`;
-  }
+  let setStylePositions = () => {
+    const translate = `translate(${x}px, 0)`;
+    lineNode.style.transform = translate;
+    lineNode.style.webkitTransform = translate; // Для Safari и старых версий Chrome и Android браузеров
+    lineNode.style.mozTransform = translate; // Для старых версий Firefox
+    lineNode.style.msTransform = translate; // Для старых версий Internet Explorer
+    lineNode.style.oTransform = translate;
+  };
 
-  function setStyleTransition() {
-    lineNode.style.transition = `all 0.5s ease 0s`;
-  }
+  let setStyleTransition = () => {
+    let transitionValue = "all 0.5s ease 0s";
+    lineNode.style.transition = transitionValue;
+    lineNode.style.webkitTransition = transitionValue; // Для Safari и старых версий Chrome и Android браузеров
+    lineNode.style.mozTransition = transitionValue; // Для старых версий Firefox
+    lineNode.style.msTransition = transitionValue; // Для старых версий Internet Explorer
+    lineNode.style.oTransition = transitionValue; // Для старых версий Opera
+  };
 
-  function resetStyleTransition() {
-    lineNode.style.transition = `all 0 ease 0s`;
-  }
-}
+  let resetStyleTransition = () => {
+    let transitionResetValue = "all 0 ease 0s";
+    lineNode.style.transition = transitionResetValue;
+    lineNode.style.webkitTransition = transitionResetValue; // Для Safari и старых версий Chrome и Android браузеров
+    lineNode.style.mozTransition = transitionResetValue; // Для старых версий Firefox
+    lineNode.style.msTransition = transitionResetValue; // Для старых версий Internet Explorer
+    lineNode.style.oTransition = transitionResetValue; // Для старых версий Opera
+  };
+
+  setEvents();
+  setParameters();
+};

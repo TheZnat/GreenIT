@@ -14,10 +14,10 @@
 
 @keyframes fadeIn {
   0% {
-    opacity: 0;
+    opacity: 1;
   }
   100% {
-    opacity: 1;
+    opacity: 0;
   }
 }
 
@@ -60,23 +60,3 @@
   }
 }
 
-/* .animate__zoomIn {
-  -webkit-animation-name: zoomIn;
-  animation-name: zoomIn;
-}
-
-@keyframes zoomIn {
-  from {
-    opacity: 0;
-    -webkit-transform: scale3d(0.3, 0.3, 0.3);
-    transform: scale3d(0.3, 0.3, 0.3);
-  }
-
-  50% {
-    opacity: 1;
-  }
-}
-.animate__zoomIn {
-  -webkit-animation-name: zoomIn;
-  animation-name: zoomIn;
-} */

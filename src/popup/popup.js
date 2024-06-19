@@ -1,8 +1,9 @@
-const ButtonNameClass = "bth--porject";
-const WrapperNameClass = "modal-overlay";
-let buttonElements = document.querySelectorAll(`.${ButtonNameClass}`);
-let bodyWrapper = document.body;
-let formHtml = `
+export function popup() {
+  const ButtonNameClass = "bth--porject";
+  const WrapperNameClass = "modal-overlay";
+  let buttonElements = document.querySelectorAll(`.${ButtonNameClass}`);
+  let bodyWrapper = document.body;
+  let formHtml = `
   <div class="feedback-form feedback-form--modal wow fadeInUp-first">
     <button class="modal__close">&#10006;</button>
     <div class="feedback-form__area">
@@ -23,11 +24,11 @@ let formHtml = `
     <div class="feedback-form--radian"></div>
 </div>`;
 
-let scrollController = {
-  scrollPosition: 0,
-  disabledScroll() {
-    scrollController.scrollPosition = window.scrollY;
-    document.body.style.cssText = `
+  let scrollController = {
+    scrollPosition: 0,
+    disabledScroll() {
+      scrollController.scrollPosition = window.scrollY;
+      document.body.style.cssText = `
         overflow: hidden;
         position:fixed;
         top: -${scrollController.scrollPosition}px;
@@ -35,44 +36,46 @@ let scrollController = {
         height: 100vh;
         width: 100vw;
         `;
-    // padding-right: ${window.innerWidth - document.body.offsetWidth}px;
-  },
+      // padding-right: ${window.innerWidth - document.body.offsetWidth}px;
+    },
 
-  enableScroll() {
-    document.body.style.cssText = ``;
-    window.scroll({ top: scrollController.scrollPosition });
-  },
-};
+    enableScroll() {
+      document.body.style.cssText = ``;
+      window.scroll({ top: scrollController.scrollPosition });
+    },
+  };
 
-function closeModal(event, tempModal) {
-  const target = event.target;
-  tempModal.classList.add("fade-out");
-  console.log(target);
-  if (
-    target === tempModal ||
-    target.closest(".modal__close") ||
-    event.code === "Escape"
-  ) {
-    tempModal.remove();
-    scrollController.enableScroll();
+  function closeModal(event, tempModal) {
+    const target = event.target;
+    tempModal.classList.add("fade-out");
+    if (
+      target === tempModal ||
+      target.closest(".modal__close") ||
+      event.code === "Escape"
+    ) {
+      tempModal.remove();
+      scrollController.enableScroll();
+    }
   }
-}
 
-function OpenModal() {
-  wrapElementByDiv(bodyWrapper, WrapperNameClass);
-  let tempModal = document.querySelector(`.${WrapperNameClass}`);
-  tempModal.addEventListener("click", (event) => closeModal(event, tempModal));
-  window.addEventListener("keydown", (event) => closeModal(event, tempModal));
-  scrollController.disabledScroll();
-}
+  function OpenModal() {
+    wrapElementByDiv(bodyWrapper, WrapperNameClass);
+    let tempModal = document.querySelector(`.${WrapperNameClass}`);
+    tempModal.addEventListener("click", (event) =>
+      closeModal(event, tempModal)
+    );
+    window.addEventListener("keydown", (event) => closeModal(event, tempModal));
+    scrollController.disabledScroll();
+  }
 
-function wrapElementByDiv(element, classNameWrapper) {
-  const wrapperNode = document.createElement("div");
-  wrapperNode.classList.add(`${classNameWrapper}`);
-  wrapperNode.innerHTML = formHtml;
-  element.appendChild(wrapperNode);
-}
+  function wrapElementByDiv(element, classNameWrapper) {
+    const wrapperNode = document.createElement("div");
+    wrapperNode.classList.add(`${classNameWrapper}`);
+    wrapperNode.innerHTML = formHtml;
+    element.appendChild(wrapperNode);
+  }
 
-buttonElements.forEach((bth) => {
-  bth.addEventListener("click", OpenModal);
-});
+  buttonElements.forEach((bth) => {
+    bth.addEventListener("click", OpenModal);
+  });
+}
