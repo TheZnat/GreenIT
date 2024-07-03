@@ -22,6 +22,7 @@
     },
     "dependencies": {
         "swiper": "^11.1.4",
-        "vite-plugin-legacy": "^2.1.0"
+        "vite-plugin-legacy": "^2.1.0",
+        "wowjs": "^1.1.3"
     }
 }

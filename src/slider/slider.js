@@ -3,7 +3,7 @@ const GalleryLineClassName = "gallery-line";
 const GallerySlideClassName = "gallery-slide";
 const GalleryOneSlideClassName = "slide";
 
-export let Slider = (element) => {
+export function Slider (element){
   let eventDown;
   let eventUp;
   let eventCancel;

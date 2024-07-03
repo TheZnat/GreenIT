@@ -3,7 +3,7 @@ export function popup() {
   const WrapperNameClass = "modal-overlay";
   let buttonElements = document.querySelectorAll(`.${ButtonNameClass}`);
   let bodyWrapper = document.body;
-  let formHtml = `
+  let formHtml2 = `
   <div class="feedback-form feedback-form--modal wow fadeInUp-first">
     <button class="modal__close">&#10006;</button>
     <div class="feedback-form__area">
@@ -23,6 +23,8 @@ export function popup() {
     </div>
     <div class="feedback-form--radian"></div>
 </div>`;
+
+ let formHtml = `<script data-b24-form="click/13/5pryns" data-skip-moving="true">(function(w,d,u){var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/180000|0);var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);})(window,document,'https://cdn-ru.bitrix24.ru/b25149776/crm/form/loader_13.js');</script>`
 
   let scrollController = {
     scrollPosition: 0,

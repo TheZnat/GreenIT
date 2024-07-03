@@ -1,13 +1,13 @@
 import "swiper/css/bundle";
 import { addSlider } from "./src/slider/addSlider.js";
+import {switchReviews} from "./src/reviews/reviews.js";
 
-// назабыть поменять условия
+
+
 if (navigator.platform.match(/iPhone|iPod|iPad/)) {
   addSlider("ios");
-  // номальные устройства
   import("./src/slider/sliderIos.css");
   const { Swiper } = await import("swiper/bundle");
-
   var swiper = new Swiper(".mySwiper", {
     slidesPerView: "auto",
     centeredSlides: true,
@@ -29,3 +29,5 @@ if (navigator.platform.match(/iPhone|iPod|iPad/)) {
   const { Gallery } = await import("./src/slider/sliderClass.js");
   new Gallery(document.getElementById("gallery"));
 }
+
+switchReviews();
