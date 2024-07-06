@@ -8,8 +8,8 @@ export function switchReviews() {
     const targetElement = event.target;
     const dataValue = targetElement.dataset.id;
     textFroReviews.innerHTML = `
-    <p class="animate__fadeInDown">${infoForReviews[dataValue].textRev}</p> 
-    <div class="reviews__text--author animate__fadeInDown">
+    <p class="animate__text-reviews animate__reviews--text">${infoForReviews[dataValue].textRev}</p> 
+    <div class="reviews__text--author animate__reviews--subtitle">
         <p class="text--author">${infoForReviews[dataValue].author}</p>
         <p>${infoForReviews[dataValue].position}</p>
     </div>`;

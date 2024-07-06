@@ -60,11 +60,7 @@
   }
 }
 
-.animate__fadeInDown {
-  -webkit-animation-name: fadeInDown;
-  animation-name: fadeInDown;
-  animation-duration: 1s;
-}
+
 
 @-webkit-keyframes fadeInDown {
   from {

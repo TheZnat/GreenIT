@@ -1,0 +1,145 @@
+@media screen and (max-width: 960px) {
+  .article {
+    padding-top: 37px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .content--article {
+    padding-top: 37px;
+    gap: 28px;
+  }
+}
+@media screen and (max-width: 840px) {
+  .article {
+    max-width: 623px;
+  }
+  .content--article__text,
+  .content--article__img {
+    width: 637px;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .head-article--title {
+    margin-bottom: 15px;
+    font-size: 40px;
+  }
+  .article {
+    padding-top: 30px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  .content--article {
+    padding-top: 30px;
+    gap: 25px;
+  }
+  .content--article__text,
+  .content--article__img {
+    width: 562px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .article {
+    max-width: 500px;
+  }
+  .head-article--title {
+    font-size: 30px;
+  }
+  .head-article--logo {
+    width: 133px;
+    height: 57px;
+    margin-bottom: 19px;
+  }
+  .content--article__text,
+  .content--article__img {
+    width: 450px;
+  }
+  .content--article__text {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .article {
+    max-width: 390px;
+  }
+  .article {
+    padding-top: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 60px;
+  }
+  .content--article {
+    padding-top: 25px;
+    gap: 25px;
+  }
+
+  .content--article__text {
+    font-size: 13px;
+  }
+
+  .content--article__text,
+  .content--article__img {
+    width: 378px;
+  }
+
+  .article__footer__bth {
+    height: 40px;
+  }
+}
+@media screen and (max-width: 428px) {
+  .head-article--title {
+    font-size: 26px;
+    margin-bottom: 12px;
+  }
+
+  .article__header {
+    height: 50px;
+    margin-bottom: 15px;
+  }
+  .head-article--textArea {
+    padding-bottom: 15px;
+  }
+  .article {
+    padding-top: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 47px;
+  }
+  .content--article {
+    padding-top: 20px;
+    gap: 18px;
+  }
+
+  .content--article__text,
+  .content--article__img {
+    width: 352px;
+  }
+
+  .content--article__text {
+    font-size: 12px;
+  }
+
+  .article__footer__bth {
+    height: 38px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .article {
+    padding-top: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 40px;
+  }
+  .content--article {
+    padding-top: 15px;
+    gap: 12px;
+  }
+  .article {
+    max-width: 325px;
+  }
+  .content--article__text,
+  .content--article__img {
+    width: 100%;
+  }
+}

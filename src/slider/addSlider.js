@@ -12,24 +12,28 @@ export function addSlider(type) {
                 <img src="/images/Cases-logo/PD.svg" alt="ProfilDoors" class="slide__item__img--iconLogo"
                   loading="lazy">
                 <p class="slide__item__title">Интеграция Битрикс</p>
+                <a href="./src/pages/page.html">Подробнее</a>
               </div>
             </div>
             <div class="swiper-slide ">
               <div class="slide">
                 <img src="/images/Cases-logo/Warmet.svg" alt="Warmet" class="slide__item__img--iconLogo" loading="lazy">
                 <p class="slide__item__title">Системное администрирование</p>
+                <a href="./src/pages/page.html">Подробнее</a>
               </div>
             </div>
             <div class="swiper-slide ">
               <div class="slide">
                 <img src="/images/Cases-logo/Rada.svg" alt="Rada" class="slide__item__img--iconLogo" loading="lazy">
                 <p class="slide__item__title">Кейс по лидогенерации</p>
+                <a href="./src/pages/page.html">Подробнее</a>
               </div>
             </div>
             <div class="swiper-slide ">
               <div class="slide">
                 <img src="/images/Cases-logo/Rada.svg" alt="Rada" class="slide__item__img--iconLogo" loading="lazy">
                 <p class="slide__item__title">Кейс по лидогенерации</p>
+                <a href="./src/pages/page.html">Подробнее</a>
               </div>
             </div>
           </div>
@@ -43,24 +47,28 @@ export function addSlider(type) {
                 <img src="/images/Cases-logo/PD.svg" alt="ProfilDoors" class="slide__item__img--iconLogo"
                   loading="lazy">
                 <p class="slide__item__title">Интеграция Битрикс</p>
+                <a href="./src/pages/page.html">Подробнее</a>
               </div>
             </div>
             <div class="gallery-slide">
               <div class="slide">
                 <img src="/images/Cases-logo/Warmet.svg" alt="Warmet" class="slide__item__img--iconLogo" loading="lazy">
                 <p class="slide__item__title">Системное администрирование</p>
+                <a href="./src/pages/page.html">Подробнее</a>
               </div>
             </div>
             <div class="gallery-slide">
               <div class="slide">
                 <img src="/images/Cases-logo/Rada.svg" alt="Rada" class="slide__item__img--iconLogo" loading="lazy">
                 <p class="slide__item__title">Кейс по лидогенерации</p>
+                <a href="./src/pages/page.html">Подробнее</a>
               </div>
             </div>
             <div class="gallery-slide">
               <div class="slide">
                 <img src="/images/Cases-logo/Rada.svg" alt="Rada" class="slide__item__img--iconLogo" loading="lazy">
                 <p class="slide__item__title">Кейс по лидогенерации</p>
+                <a href="./src/pages/page.html">Подробнее</a>
               </div>
             </div>
           </div>
