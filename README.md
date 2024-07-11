@@ -5,7 +5,7 @@
 
 Ссылки на сайт:
 [GitHub Pages](https://theznat.github.io/GreenIT/)
-[Готовая страница](https://spb-git.ru)
+[Готовый проект](https://spb-git.ru)
 
 ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/platane/platane/main.yml?label=action&style=flat-square)
 
