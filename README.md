@@ -1,8 +1,11 @@
 # GreenIT
 
-Сайт для компании, оказывающий услуги маркетинга и администрирования.
+Сайт для компании, оказывающий услуги маркетинга и администрирования. В этом репозитории находиться верстка самого проекта.
+Следующая версия проекта с Express и Next находиться тут [GreenIT-V2](https://github.com/TheZnat/GreenIT-V2)
 
-Ссылка на сайт [GitHub Pages](https://theznat.github.io/GreenIT/)
+Ссылки на сайт:
+[GitHub Pages](https://theznat.github.io/GreenIT/)
+[Готовая страница](https://spb-git.ru)
 
 ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/platane/platane/main.yml?label=action&style=flat-square)
 
@@ -16,8 +19,6 @@
 
 - [js](https://262.ecma-international.org/)
 - [vite](https://vite-docs-ru.vercel.app/)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Next.js](https://nextjs-ru.vercel.app/)
 
 ## Начало работы
 
@@ -27,6 +28,10 @@
 
 ```sh
 npm start
+
+or
+
+npm preview
 ```
 
 ### Создание билда
@@ -41,4 +46,4 @@ npm run build
 
 - [x] Верстка проекта
 - [x] Написание скриптов для работы со страницей
-- [ ] Перенос пректа на Next.js
+
