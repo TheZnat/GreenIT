@@ -28,10 +28,6 @@
 
 ```sh
 npm start
-
-or
-
-npm preview
 ```
 
 ### Создание билда
@@ -40,6 +36,10 @@ npm preview
 
 ```sh
 npm run build
+
+or
+
+npm preview
 ```
 
 ## Статус проекта
